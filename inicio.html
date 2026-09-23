@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bisteca na Pedra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MENU DO TOPO -->
+  <nav class="menu">
+
+    <div class="logo">
+      <div class="logo-icone">
+        <svg viewBox="0 0 24 24"><path d="M12.5 2c.8 2.9-1.7 4.2-2.6 6.4-.6 1.5-.5 3.1.5 4.2a3 3 0 004.9-2.2c0-1-.4-1.7-.4-1.7s.9 1 .9 2.6A5 5 0 018 16c0-5.1 3.3-7 4.5-11.3z"/></svg>
+      </div>
+      Bisteca na Pedra
+    </div>
+<div class="links">
+  <a class="link ativo" href="inicio.html">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/></svg>
+    Início
+  </a>
+  <a class="link" href="estoque.html">
+    <svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>
+    Estoque
+  </a>
+  <a class="link" href="pratos.html">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 8v3a1 1 0 002 0V8"/><path d="M9 11v5"/><path d="M15 8c-1 0-1.5 1-1.5 2s.5 2 1.5 2v4"/></svg>
+    Pratos
+  </a>
+  <a class="link" href="relatorio.html">
+    <svg viewBox="0 0 24 24"><line x1="4" y1="20" x2="4" y2="12"/><line x1="10" y1="20" x2="10" y2="6"/><line x1="16" y1="20" x2="16" y2="14"/><line x1="20" y1="20" x2="20" y2="9"/></svg>
+    Relatórios
+  </a>
+</div>
+
+  </nav>
+
+  <!-- CONTEÚDO -->
+  <div class="container">
+
+    <div class="titulo">Início</div>
+    <div class="subtitulo">Aqui você acompanha o status do estoque e recebe alertas importantes.</div>
+
+    <!-- CARDS -->
+    <div class="cards">
+
+      <div class="card vermelho">
+        <div class="icone">
+          <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div class="numero">3</div>
+        <div class="texto">Produtos em falta</div>
+      </div>
+
+      <div class="card laranja">
+        <div class="icone">
+          <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div class="numero">5</div>
+        <div class="texto">Estoque baixo</div>
+      </div>
+
+      <div class="card roxo">
+        <div class="icone">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="numero">4</div>
+        <div class="texto">Próximos do vencimento</div>
+      </div>
+
+      <div class="card verde">
+        <div class="icone">
+          <svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v7a1 1 0 001 1h12a1 1 0 001-1v-7"/><path d="M10 16h4"/><path d="M3 8l1.5-4.5A1 1 0 015.44 3h13.12a1 1 0 01.94.5L21 8"/></svg>
+        </div>
+        <div class="numero">42</div>
+        <div class="texto">Total de insumos</div>
+      </div>
+
+    </div>
+
+    <!-- DUAS COLUNAS -->
+    <div class="colunas">
+
+      <!-- ESQUERDA: PRODUTOS -->
+      <div class="caixa">
+        <div class="caixa-titulo">Produtos que precisam de atenção</div>
+
+        <div class="linha cabecalho">
+          <div>Produto</div>
+          <div>Quantidade</div>
+          <div>Situação</div>
+        </div>
+
+        <div class="linha critico">
+          <div>Refrigerante (fardo)</div>
+          <div>0</div>
+          <div class="badge vermelho">Em falta</div>
+        </div>
+
+        <div class="linha">
+          <div>Arroz (kg)</div>
+          <div>2</div>
+          <div class="badge laranja">Estoque baixo</div>
+        </div>
+
+        <div class="linha">
+          <div>Carne bovina (kg)</div>
+          <div>5</div>
+          <div class="badge laranja">Estoque baixo</div>
+        </div>
+
+        <div class="linha">
+          <div>Tomate (kg)</div>
+          <div>3</div>
+          <div class="badge laranja">Estoque baixo</div>
+        </div>
+
+        <div class="linha">
+          <div>Queijo mussarela (kg)</div>
+          <div>1</div>
+          <div class="badge laranja">Estoque baixo</div>
+        </div>
+
+        <div class="linha">
+          <div>Alface (kg)</div>
+          <div>2</div>
+          <div class="badge roxo">Próximo do vencimento</div>
+        </div>
+
+        <div class="ver-mais">Ver todos os produtos →</div>
+      </div>
+
+      <!-- DIREITA -->
+      <div class="coluna-direita">
+
+        <div class="caixa">
+          <div class="caixa-titulo">Ações rápidas</div>
+
+          <div class="acao verde">
+            <div class="acao-icone">
+              <svg viewBox="0 0 24 24"><path d="M12 3v10"/><polyline points="8 9 12 13 16 9"/><path d="M4 15v4a2 2 0 002 2h12a2 2 0 002-2v-4"/></svg>
+            </div>
+            Registrar entrada
+          </div>
+
+          <div class="acao laranja">
+            <div class="acao-icone">
+              <svg viewBox="0 0 24 24"><path d="M12 13V3"/><polyline points="8 7 12 3 16 7"/><path d="M4 15v4a2 2 0 002 2h12a2 2 0 002-2v-4"/></svg>
+            </div>
+            Registrar saída
+          </div>
+
+          <div class="acao azul">
+            <div class="acao-icone">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            </div>
+            Adicionar insumo
+          </div>
+        </div>
+
+        <div class="caixa">
+          <div class="caixa-titulo">Próximos do vencimento</div>
+
+          <div class="vencimento">
+            <div class="nome">
+              <div class="ponto verde"></div>
+              Alface
+            </div>
+            <div class="dias">Vence em 2 dias</div>
+          </div>
+
+          <div class="vencimento">
+            <div class="nome">
+              <div class="ponto laranja"></div>
+              Queijo mussarela
+            </div>
+            <div class="dias">Vence em 4 dias</div>
+          </div>
+
+          <div class="vencimento">
+            <div class="nome">
+              <div class="ponto vermelho"></div>
+              Molho de tomate
+            </div>
+            <div class="dias">Vence em 5 dias</div>
+          </div>
+
+          <div class="ver-mais">Ver todos →</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RODAPÉ -->
+  <div class="rodape">
+
+    <div class="rodape-menu">
+
+      <div class="logo">
+        <div class="logo-icone">
+          <svg viewBox="0 0 24 24"><path d="M12.5 2c.8 2.9-1.7 4.2-2.6 6.4-.6 1.5-.5 3.1.5 4.2a3 3 0 004.9-2.2c0-1-.4-1.7-.4-1.7s.9 1 .9 2.6A5 5 0 018 16c0-5.1 3.3-7 4.5-11.3z"/></svg>
+        </div>
+        Bisteca na Pedra
+      </div>
+
+      <div class="links">
+  <a class="link ativo" href="inicio.html">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/></svg>
+    Início
+  </a>
+  <a class="link" href="estoque.html">
+    <svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>
+    Estoque
+  </a>
+  <a class="link" href="pratos.html">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 8v3a1 1 0 002 0V8"/><path d="M9 11v5"/><path d="M15 8c-1 0-1.5 1-1.5 2s.5 2 1.5 2v4"/></svg>
+    Pratos
+  </a>
+  <a class="link" href="relatorio.html">
+    <svg viewBox="0 0 24 24"><line x1="4" y1="20" x2="4" y2="12"/><line x1="10" y1="20" x2="10" y2="6"/><line x1="16" y1="20" x2="16" y2="14"/><line x1="20" y1="20" x2="20" y2="9"/></svg>
+    Relatórios
+  </a>
+</div>
+
+    </div>
+
+    <div class="rodape-direitos">
+      © 2026 Bisteca na Pedra. Todos os direitos reservados.
+    </div>
+
+  </div>
+
+</body>
+</html>
