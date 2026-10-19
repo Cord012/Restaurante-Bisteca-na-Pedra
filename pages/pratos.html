@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Estoque - Bisteca na Pedra</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Pratos - Bisteca na Pedra</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -19,7 +19,7 @@
     </div>
 
     <div class="links">
-      <a class="link" href="../index.html">
+      <a class="link" href="inicio.html">
         <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/></svg>
         Início
       </a>
@@ -42,10 +42,160 @@
   <!-- CONTEÚDO -->
   <div class="container">
 
-    <div class="titulo">Pratos</div>
+    <div class="topo-pagina">
+      <div>
+        <div class="titulo">Pratos</div>
+        <div class="subtitulo">Cadastre os pratos do restaurante e os ingredientes que cada um consome.</div>
+      </div>
 
-    <!-- coloque o conteúdo da página aqui -->
+      <div class="botao-verde">
+        <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Adicionar prato
+      </div>
+    </div>
 
+    <div class="pratos-grid">
+
+      <!-- ESQUERDA: LISTA DE PRATOS -->
+      <div class="caixa lista-pratos">
+
+        <div class="busca">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <div class="busca-texto">Buscar prato...</div>
+        </div>
+
+        <div class="item-prato ativo">
+          <div class="foto-mini">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 8v3a1 1 0 002 0V8"/><path d="M9 11v5"/><path d="M15 8c-1 0-1.5 1-1.5 2s.5 2 1.5 2v4"/></svg>
+          </div>
+          <div>
+            <div class="item-nome">Hambúrguer</div>
+            <div class="item-sub">6 ingredientes</div>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="foto-mini">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 8v3a1 1 0 002 0V8"/><path d="M9 11v5"/><path d="M15 8c-1 0-1.5 1-1.5 2s.5 2 1.5 2v4"/></svg>
+          </div>
+          <div>
+            <div class="item-nome">Bife na Pedra</div>
+            <div class="item-sub">5 ingredientes</div>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="foto-mini">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 8v3a1 1 0 002 0V8"/><path d="M9 11v5"/><path d="M15 8c-1 0-1.5 1-1.5 2s.5 2 1.5 2v4"/></svg>
+          </div>
+          <div>
+            <div class="item-nome">Frango Grelhado</div>
+            <div class="item-sub">4 ingredientes</div>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="foto-mini">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 8v3a1 1 0 002 0V8"/><path d="M9 11v5"/><path d="M15 8c-1 0-1.5 1-1.5 2s.5 2 1.5 2v4"/></svg>
+          </div>
+          <div>
+            <div class="item-nome">Parmegiana</div>
+            <div class="item-sub">6 ingredientes</div>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="foto-mini">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 8v3a1 1 0 002 0V8"/><path d="M9 11v5"/><path d="M15 8c-1 0-1.5 1-1.5 2s.5 2 1.5 2v4"/></svg>
+          </div>
+          <div>
+            <div class="item-nome">Risoto de Frango</div>
+            <div class="item-sub">5 ingredientes</div>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="foto-mini">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 8v3a1 1 0 002 0V8"/><path d="M9 11v5"/><path d="M15 8c-1 0-1.5 1-1.5 2s.5 2 1.5 2v4"/></svg>
+          </div>
+          <div>
+            <div class="item-nome">Salada Caesar</div>
+            <div class="item-sub">4 ingredientes</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DIREITA: PRATO ESCOLHIDO -->
+      <div class="caixa">
+
+        <div class="prato-topo">
+          <div class="foto">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 8v3a1 1 0 002 0V8"/><path d="M9 11v5"/><path d="M15 8c-1 0-1.5 1-1.5 2s.5 2 1.5 2v4"/></svg>
+          </div>
+          <div class="prato-info">
+            <div class="prato-nome">Hambúrguer</div>
+            <div class="prato-sub">6 ingredientes</div>
+          </div>
+          <div class="botao-borda">
+            <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Editar
+          </div>
+        </div>
+
+        <div class="caixa-titulo">Ingredientes</div>
+
+        <div class="tabela-ing">
+          <div class="linha-ing cabecalho">
+            <div>Ingrediente</div>
+            <div>Quantidade</div>
+            <div>Unidade</div>
+          </div>
+          <div class="linha-ing">
+            <div>Pão de hambúrguer</div>
+            <div>1</div>
+            <div>unidade</div>
+          </div>
+          <div class="linha-ing">
+            <div>Carne bovina</div>
+            <div>1</div>
+            <div>unidade</div>
+          </div>
+          <div class="linha-ing">
+            <div>Queijo mussarela</div>
+            <div>1</div>
+            <div>fatia</div>
+          </div>
+          <div class="linha-ing">
+            <div>Alface</div>
+            <div>2</div>
+            <div>folhas</div>
+          </div>
+          <div class="linha-ing">
+            <div>Tomate</div>
+            <div>2</div>
+            <div>rodelas</div>
+          </div>
+          <div class="linha-ing">
+            <div>Ketchup</div>
+            <div>20</div>
+            <div>g</div>
+          </div>
+        </div>
+
+        <div class="botao-adicionar">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Adicionar ingrediente
+        </div>
+
+        <div class="aviso-info">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <div>O estoque será descontado automaticamente quando o prato for vendido (em integração com o sistema de vendas).</div>
+        </div>
+
+      </div>
+
+    </div>
   </div>
 
   <!-- RODAPÉ -->
@@ -61,7 +211,7 @@
       </div>
 
       <div class="links">
-        <a class="link" href="../index.html">
+        <a class="link" href="inicio.html">
           <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/></svg>
           Início
         </a>

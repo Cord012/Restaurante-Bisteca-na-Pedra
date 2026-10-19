@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Estoque - Bisteca na Pedra</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Relatórios - Bisteca na Pedra</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -19,7 +19,7 @@
     </div>
 
     <div class="links">
-      <a class="link" href="../index.html">
+      <a class="link" href="inicio.html">
         <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/></svg>
         Início
       </a>
@@ -42,9 +42,165 @@
   <!-- CONTEÚDO -->
   <div class="container">
 
-    <div class="titulo">Relatorio</div>
+    <div class="topo-relatorio">
+      <div>
+        <div class="titulo">Relatórios</div>
+        <div class="subtitulo">Acompanhe o consumo dos insumos e planeje suas compras.</div>
+      </div>
+      <div class="periodo">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Abril/2025 - Maio/2025
+      </div>
+    </div>
 
-    <!-- coloque o conteúdo da página aqui -->
+    <!-- ABAS -->
+    <div class="abas">
+      <div class="aba ativa">Consumo mensal</div>
+      <div class="aba">Comparativo</div>
+      <div class="aba">Reposição</div>
+      <div class="aba">Resumo geral</div>
+    </div>
+
+    <div class="colunas">
+
+      <!-- GRÁFICO -->
+      <div class="caixa">
+        <div class="caixa-titulo">Consumo de insumos (kg)</div>
+
+        <div class="legenda">
+          <span><i class="quad azul"></i>Abril</span>
+          <span><i class="quad laranja"></i>Maio</span>
+        </div>
+
+        <div class="grafico">
+          <div class="eixo-y">
+            <span>80</span><span>60</span><span>40</span><span>20</span><span>0</span>
+          </div>
+          <div class="barras-area">
+            <div class="grupo">
+              <div class="barras">
+                <div class="barra azul" style="height:81%"></div>
+                <div class="barra laranja" style="height:60%"></div>
+              </div>
+              <div class="rotulo">Carne</div>
+            </div>
+            <div class="grupo">
+              <div class="barras">
+                <div class="barra azul" style="height:37%"></div>
+                <div class="barra laranja" style="height:60%"></div>
+              </div>
+              <div class="rotulo">Arroz</div>
+            </div>
+            <div class="grupo">
+              <div class="barras">
+                <div class="barra azul" style="height:21%"></div>
+                <div class="barra laranja" style="height:35%"></div>
+              </div>
+              <div class="rotulo">Feijão</div>
+            </div>
+            <div class="grupo">
+              <div class="barras">
+                <div class="barra azul" style="height:25%"></div>
+                <div class="barra laranja" style="height:47%"></div>
+              </div>
+              <div class="rotulo">Tomate</div>
+            </div>
+            <div class="grupo">
+              <div class="barras">
+                <div class="barra azul" style="height:16%"></div>
+                <div class="barra laranja" style="height:25%"></div>
+              </div>
+              <div class="rotulo">Alface</div>
+            </div>
+            <div class="grupo">
+              <div class="barras">
+                <div class="barra azul" style="height:19%"></div>
+                <div class="barra laranja" style="height:28%"></div>
+              </div>
+              <div class="rotulo">Queijo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIS CONSUMIDOS -->
+      <div class="coluna-direita">
+        <div class="caixa">
+          <div class="caixa-titulo">Mais consumidos</div>
+
+          <div class="ranking">
+            <div class="ranking-item">
+              <span class="pos">1.</span>
+              <span class="nome-item">Carne bovina</span>
+              <span class="valor">68 kg</span>
+            </div>
+            <div class="ranking-item">
+              <span class="pos">2.</span>
+              <span class="nome-item">Arroz</span>
+              <span class="valor">52 kg</span>
+            </div>
+            <div class="ranking-item">
+              <span class="pos">3.</span>
+              <span class="nome-item">Tomate</span>
+              <span class="valor">38 kg</span>
+            </div>
+            <div class="ranking-item">
+              <span class="pos">4.</span>
+              <span class="nome-item">Queijo mussarela</span>
+              <span class="valor">27 kg</span>
+            </div>
+            <div class="ranking-item">
+              <span class="pos">5.</span>
+              <span class="nome-item">Frango</span>
+              <span class="valor">22 kg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TABELA DETALHADA -->
+    <div class="caixa caixa-tabela">
+      <div class="caixa-titulo">Consumo detalhado</div>
+
+      <div class="linha cabecalho">
+        <div>Produto</div>
+        <div>Abril</div>
+        <div>Maio</div>
+        <div>Variação</div>
+      </div>
+      <div class="linha">
+        <div>Carne bovina</div>
+        <div>32 kg</div>
+        <div>68 kg</div>
+        <div class="variacao alta">↑ 112%</div>
+      </div>
+      <div class="linha">
+        <div>Arroz</div>
+        <div>20 kg</div>
+        <div>52 kg</div>
+        <div class="variacao alta">↑ 160%</div>
+      </div>
+      <div class="linha">
+        <div>Feijão</div>
+        <div>15 kg</div>
+        <div>28 kg</div>
+        <div class="variacao alta">↑ 87%</div>
+      </div>
+      <div class="linha">
+        <div>Tomate</div>
+        <div>18 kg</div>
+        <div>38 kg</div>
+        <div class="variacao alta">↑ 111%</div>
+      </div>
+      <div class="linha">
+        <div>Alface</div>
+        <div>10 kg</div>
+        <div>22 kg</div>
+        <div class="variacao alta">↑ 120%</div>
+      </div>
+    </div>
 
   </div>
 
@@ -61,7 +217,7 @@
       </div>
 
       <div class="links">
-        <a class="link" href="../index.html">
+        <a class="link" href="inicio.html">
           <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/></svg>
           Início
         </a>
