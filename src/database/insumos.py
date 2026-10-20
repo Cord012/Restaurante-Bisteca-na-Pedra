@@ -1,6 +1,7 @@
 from src.database.conexao import conectar
 from src.insumos import Insumo
 
+DIAS_ALERTA_VENCIMENTO = 5
 
 def inserir_insumo(insumo):
     conn = conectar()
@@ -65,3 +66,45 @@ def deletar_insumo(insumo_id):
     conn.commit()
     conn.close()
     return True
+
+def contar_insumos():
+    conn = conectar()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT COUNT(*) FROM insumos")
+
+    resultado = cursor.fetchone()[0]
+    conn.close()
+    return resultado
+
+def consultar_insumos_em_falta():
+    conn = conectar()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM insumos WHERE quantidade <= 0")
+
+    resultado = cursor.fetchall()
+    conn.close()
+    return resultado
+
+def consultar_insumos_estoque_baixo():
+    conn = conectar()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM insumos WHERE quantidade > 0 AND quantidade <= quantidade_minima")
+
+    resultado = cursor.fetchall()
+    conn.close()
+    return resultado
+
+def consultar_insumos_a_vencer():
+    conn = conectar()
+    cursor = conn.cursor()
+
+    cursor.execute(f"SELECT * FROM insumos WHERE validade IS NOT NULL AND validade BETWEEN date('now') AND date('now', '+{DIAS_ALERTA_VENCIMENTO} days')")
+
+    resultado = cursor.fetchall()
+    conn.close()
+    return resultado
+
+
