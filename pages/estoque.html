@@ -47,7 +47,7 @@
         <div class="titulo">Estoque</div>
         <div class="subtitulo">Gerencie os insumos, cadastre novos produtos e registre as movimentações.</div>
       </div>
-      <button class="botao-verde">
+      <button class="botao-verde" id="botao-adicionar-insumo">
         <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         Adicionar insumo
       </button>
@@ -57,15 +57,7 @@
     <div class="filtros">
       <div class="busca">
         <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg>
-        <input type="text" placeholder="Buscar insumo...">
-      </div>
-      <div class="select-filtro">
-        Todos os tipos
-        <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
-      </div>
-      <div class="select-filtro">
-        Todos os status
-        <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        <input type="text" id="busca-insumo" placeholder="Buscar insumo...">
       </div>
     </div>
 
@@ -74,141 +66,16 @@
 
       <div class="linha-estoque cabecalho">
         <div>Nome</div>
-        <div>Categoria</div>
-        <div>Tipo</div>
         <div>Unidade</div>
         <div>Quantidade</div>
+        <div>Qtd. mínima</div>
         <div>Validade</div>
         <div>Status</div>
         <div class="col-acoes">Ações</div>
       </div>
 
-      <div class="linha-estoque">
-        <div>Arroz</div>
-        <div>Grão</div>
-        <div>Não perecível</div>
-        <div>kg</div>
-        <div>15</div>
-        <div>-</div>
-        <div><span class="badge verde">Normal</span></div>
-        <div class="col-acoes">
-          <span class="acao-icone-tabela editar"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></span>
-          <span class="acao-icone-tabela excluir"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg></span>
-        </div>
-      </div>
+      <div id="lista-insumos"></div>
 
-      <div class="linha-estoque">
-        <div>Feijão</div>
-        <div>Grão</div>
-        <div>Não perecível</div>
-        <div>kg</div>
-        <div>8</div>
-        <div>-</div>
-        <div><span class="badge verde">Normal</span></div>
-        <div class="col-acoes">
-          <span class="acao-icone-tabela editar"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></span>
-          <span class="acao-icone-tabela excluir"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg></span>
-        </div>
-      </div>
-
-      <div class="linha-estoque">
-        <div>Carne bovina</div>
-        <div>Carne</div>
-        <div>Perecível</div>
-        <div>kg</div>
-        <div>5</div>
-        <div>12/05/2025</div>
-        <div><span class="badge laranja">Baixo</span></div>
-        <div class="col-acoes">
-          <span class="acao-icone-tabela editar"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></span>
-          <span class="acao-icone-tabela excluir"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg></span>
-        </div>
-      </div>
-
-      <div class="linha-estoque">
-        <div>Tomate</div>
-        <div>Legume</div>
-        <div>Perecível</div>
-        <div>kg</div>
-        <div>3</div>
-        <div>20/05/2025</div>
-        <div><span class="badge laranja">Baixo</span></div>
-        <div class="col-acoes">
-          <span class="acao-icone-tabela editar"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></span>
-          <span class="acao-icone-tabela excluir"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg></span>
-        </div>
-      </div>
-
-      <div class="linha-estoque">
-        <div>Alface</div>
-        <div>Verdura</div>
-        <div>Perecível</div>
-        <div>kg</div>
-        <div>2</div>
-        <div>18/05/2025</div>
-        <div><span class="badge roxo">Próximo do vencimento</span></div>
-        <div class="col-acoes">
-          <span class="acao-icone-tabela editar"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></span>
-          <span class="acao-icone-tabela excluir"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg></span>
-        </div>
-      </div>
-
-      <div class="linha-estoque">
-        <div>Queijo mussarela</div>
-        <div>Laticínio</div>
-        <div>Perecível</div>
-        <div>kg</div>
-        <div>1</div>
-        <div>15/05/2025</div>
-        <div><span class="badge laranja">Baixo</span></div>
-        <div class="col-acoes">
-          <span class="acao-icone-tabela editar"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></span>
-          <span class="acao-icone-tabela excluir"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg></span>
-        </div>
-      </div>
-
-      <div class="linha-estoque">
-        <div>Refrigerante</div>
-        <div>Bebida</div>
-        <div>Não perecível</div>
-        <div>fardo</div>
-        <div>0</div>
-        <div>-</div>
-        <div><span class="badge vermelho">Em falta</span></div>
-        <div class="col-acoes">
-          <span class="acao-icone-tabela editar"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></span>
-          <span class="acao-icone-tabela excluir"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg></span>
-        </div>
-      </div>
-
-      <div class="linha-estoque">
-        <div>Pão de hambúrguer</div>
-        <div>Pães</div>
-        <div>Perecível</div>
-        <div>unidade</div>
-        <div>20</div>
-        <div>25/05/2025</div>
-        <div><span class="badge verde">Normal</span></div>
-        <div class="col-acoes">
-          <span class="acao-icone-tabela editar"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></span>
-          <span class="acao-icone-tabela excluir"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg></span>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- PAGINAÇÃO -->
-    <div class="paginacao">
-      <div>Mostrando 1 a 8 de 42 resultados</div>
-      <div class="paginas">
-        <span class="pagina seta"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></span>
-        <span class="pagina ativa">1</span>
-        <span class="pagina">2</span>
-        <span class="pagina">3</span>
-        <span class="pagina">4</span>
-        <span class="pagina">5</span>
-        <span class="pagina seta"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
-      </div>
     </div>
 
   </div>
@@ -251,6 +118,8 @@
     </div>
 
   </div>
+
+  <script src="../js/estoque.js"></script>
 
 </body>
 </html>
